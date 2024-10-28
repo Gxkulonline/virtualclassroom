@@ -2,7 +2,7 @@ from flask import Flask, request, redirect, url_for, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 import mysql.connector
 
-app = Flask(_name_)
+app = Flask(__name__)
 app.secret_key = 'temporary_key'
 
 def get_db_connection():
@@ -76,7 +76,6 @@ def home():
 @app.route('/logout')
 
 def logout():
-
     return redirect(url_for('login'))
 
 
