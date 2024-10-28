@@ -10,7 +10,7 @@ def get_db_connection():
         host='clonedb.cv4uggoe2acz.eu-north-1.rds.amazonaws.com',
         user='admin',
         password='gxkul2004',
-        database='clonedb'
+        database='clone_db'
     )
 
 @app.route('/register', methods=['GET', 'POST'])
@@ -81,6 +81,6 @@ def logout():
 
 
 
-if _name_ == '_main_':
+if __name__ == '__main__':
 
     app.run(host="0.0.0.0", port=5000,debug=True)
